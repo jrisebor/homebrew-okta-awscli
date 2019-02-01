@@ -5,7 +5,7 @@ class OktaAwscli < Formula
   homepage "https://github.com/jrisebor/okta-awscli"
   url "git@github.com:jrisebor/okta-awscli.git",
     :using => :git,
-    :tag => "v0.3.1"
+    :tag   => "v0.3.1"
 
   depends_on "python"
 
@@ -101,6 +101,10 @@ class OktaAwscli < Formula
 
   def install
     virtualenv_install_with_resources
-    bin.install "#{prefix}/libexec/bin/okta-awscli"
+    bin.install "#{libexec}/bin/okta-awscli"
+  end
+
+  test do
+    assert_equal version, shell_output("#{bin}/okta-awscli --version")
   end
 end
