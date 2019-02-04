@@ -3,7 +3,7 @@ class OktaAwscli < Formula
 
   desc "Provides a wrapper for Okta authentication to awscli"
   homepage "https://github.com/jrisebor/okta-awscli"
-  url "https://github.com:jrisebor/okta-awscli.git",
+  url "https://github.com/jrisebor/okta-awscli.git",
     :tag   => "v0.3.1"
 
   depends_on "python"
